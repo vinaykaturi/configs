@@ -1,4 +1,4 @@
-#Setup on a New Machine
+# Setup on a New Machine
 
 1.Initialize a bare repository in your home directory:
 ```bash
@@ -30,7 +30,7 @@ config commit -m "Add initial dotfiles"
 config push -u origin main
 ```
 
-#Installing on a New System
+# Installing on a New System
 
 1.Clone the bare repository:
 ```bash
@@ -53,7 +53,7 @@ config checkout
 mkdir -p .config-backup && config checkout 2>&1 | grep "^\s" | awk '{print $1}' | xargs -I{} mv {} .config-backup/{}
 ```
 
-##Key Benefits
+## Key Benefits
 - No symlinks needed: Files live in their correct locations (~/.zshrc, etc.). 
 - Easy to replicate: Clone the repo and run config checkout on any machine. 
 - Full version control: Track changes, roll back, and collaborate.
